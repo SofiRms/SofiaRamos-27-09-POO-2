@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="bg-light">
+        <div class="container">
+          <div class="row justify justify-content-center">
+            <div class="col-11 col-md-8 col-lg-6 col-xl-5">
+              <form class="">
+                <div class="card bg-dark">
+                  <div class="row mt-0">
+                    <div class="col-md-12 ">
+                      <h4 class="">Agregar Productos</h4>
+                      <p>Seleccione el producto que desea registrar al stock</p>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <div class="form-group row">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+  
+                    <div class="col-md-12 mb-2">
+                      <label for="estados">TIENDA ELECTRÓNICA"</label>
+                      <select class="custom-select my-1 mr-srm-3" id="seleccion" name="seleccion">
+                        <option value="Notebook">Notebook</option>
+                        <option value="Monitor">Monitor</option>
+                        <option value="Procesador">Procesador</option>
+                        <option value="Motherboard">Motherboard</option>
+                        <option value="Teclado">Teclado</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-md-12 mb-2">
+
+                      <div class="form-group">
+                        <label for="cantidad-registrar">Precio</label>
+                        <input type="text" class="form-control" id="precio" name="precio">
+                      </div>
+      
+                      <div class="form-group">
+                        <label for="cantidad-registrar">Cantidad</label>
+                        <input type="number" class="form-control" id="cantidad-agregar" name="cantidad-agregar">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row justify-content-center mb-0">
+                    <div class="col-md-12 px-3">
+                      <input type="button" id="enviar" onclick="" value="Enviar" class="btn btn-block btn-purple rm-border"> 
+                      </div>
+                  </div>
+                  <div id="Agregar"></div>
+                  <br>
+                </div>
+            </div>
+            </form>
+
+            <form class="">
+              <div class="card bg-dark">
+                <div class="row mt-0">
+                  <div class="col-md-12 ">
+                    <h4 class="">Stock</h4>
+                    <p>Seleccione producto para ver su stock</p>
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <div class="form-group row">
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <div class="col-md-12 mb-2">
+                    <select class="custom-select my-1 mr-srm-3" id="seleccion2" name="seleccion">
+                      <option value="Notebook">Notebook</option>
+                      <option value="Monitor">Monitor</option>
+                      <option value="Procesadores">Procesadores</option>
+                      <option value="Motherboard">Motherboard</option>
+                      <option value="Teclado">Teclado</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12 mb-2">
+                    <div class="form-group">
+                      <label for="cantidad-registrar">Cantidad vendida</label>
+                      <input type="number" class="form-control" id="cantidad-vendida" name="cantidad-vendida">
+                    </div>
+                    <div id="stockElement">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center mb-0">
+                  <div class="col-md-12 px-3">
+                    <input type="button" id="enviar2" onclick="" value="Enviar" class="btn btn-block btn-purple rm-border"> 
+                    </div>
+                </div>
+                <br>
+              </div>
+          </div>
+          </form>
+        
+      </div>
+        </div>
+        <div class="row justify justify-content-center">
+          <div class="col-11 col-md-8 col-lg-6 col-xl-5">
+            <form class="">
+              <div class="card bg-dark">
+                <div class="row mt-0">
+                  <div class="col-md-12 ">
+                    <h4 class="">Carrito</h4>
+                    <p>Seleccione el producto y tipo de venta que desea registrar</p>
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <div class="form-group row">
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <div class="col-md-12 mb-2">
+                    <select class="custom-select my-1 mr-srm-3" id="seleccion" name="seleccion">
+                      <option value="Notebook">Notebook</option>
+                      <option value="Monitor">Monitor</option>
+                      <option value="Procesadores">Procesadores</option>
+                      <option value="Motherboard">Motherboard</option>
+                      <option value="Teclado">Teclado</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12 mb-2">
+                    <label for="estados">TIPO DE COMPRA</label>
+                    <select class="custom-select my-1 mr-srm-3" id="tipoVenta" name="seleccion">
+                      <option value="Unitario">Precio Unitario</option>
+                      <option value="Cantidad">Por Cantidad</option>
+                      <option value="Bolsa">Por Bolsa</option>
+                    </select>
+                    <div class="form-group">
+                      <label for="cantidad-registrar">Cantidad</label>
+                      <input type="number" class="form-control" id="cantidad-comprar" name="cantidad-comprar">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center mb-0">
+                  <div class="col-md-12 px-3">
+                    <input type="button" id="enviar" onclick="" value="Calcular total" class="btn btn-block btn-purple rm-border"> 
+                    </div>
+                </div>
+                <br>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+      </div>
+      </div>
+    
+    
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
